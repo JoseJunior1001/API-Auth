@@ -9,7 +9,7 @@ const {
   registerValidation,
   loginValidation,
   refreshTokenValidation
-} = require('../middleware/validation');
+} = require('../middlaware/validation');
 const authenticateToken = require('../middleware/auth');
 
 // Public routes
@@ -25,5 +25,6 @@ router.get('/profile', authenticateToken, (req, res) => {
     user: req.user
   });
 });
+
 
 module.exports = router;
